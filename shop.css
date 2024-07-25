@@ -1,0 +1,116 @@
+body{
+    width: 1000px;
+    background-image: linear-gradient(90deg,#66B342, #519DE3);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+p{
+    color : white;
+    font-weight:bolder;
+  
+  }
+
+a.a-1{
+    color: white;
+    font-weight:600;
+      font-size: 20px;
+      text-decoration: none;
+  }
+  
+  a.a-1:hover{
+    color:#A0CCFF;
+    transition: all 0.3s;
+  }
+
+  input.i-01{
+    border:3px solid white;
+    border-radius: 20px;
+    width:100px;
+    font-size: 15px;
+    font-weight:600;
+    background-color: rgba(53, 188, 0, 0);
+    color: rgb(255, 255, 255);
+
+    position: relative;
+    top:190px;
+    left:300px;
+}
+
+input.i-2{
+    position:relative; 
+    left:15px; 
+    border:none;
+    width:60px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(233, 233, 233,0);
+    color: rgb(255, 255, 255);
+}
+
+form{
+    position: relative;
+    top:-200px;
+}
+
+hr{
+    width: 700px;
+    height: 3px;
+    background-color: white;
+    border: 0;
+    border-radius: 20px;
+    position: relative;
+    top:15px;
+    left:-50px;
+  }
+
+  div{
+    width: 700px;
+    height: 100px;
+    background-color: rgb(233, 233, 233,0);
+    border: 3px solid white;
+    border-radius: 30px;
+    position: relative;
+    left:95px;
+    top:20px;
+    text-align: center;
+  }
+
+  p.p-1{
+    font-size:20px;
+    position: relative;
+    top:20px;
+    left:-200px;
+  }
+
+button{
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color: #5EAB82;
+    position: relative;
+    top:-30px;
+    left:200px;
+}
+
+button:hover{
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 0 3px #ffffff inset; 
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+    position: relative;
+    top:-30px;
+    left:200px;
+    transition: all 0.3s;
+}

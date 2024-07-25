@@ -1,3 +1,6 @@
+var id = localStorage.getItem("id");
+var pwd = localStorage.getItem("pwd");
+
 const idElement = document.getElementById("id");
 const pwdElement = document.getElementById("pwd");
 const loginButton = document.getElementById("login-btn");
@@ -11,5 +14,7 @@ console.log(userLoginInfo);
 
 loginButton.addEventListener("click",()=>{
     let userInfo = { id: idElement.value, pwd: pwdElement.value }
+    localStorage.setItem("id", id);
+    localStorage.setItem("pwd", pwd);
     localStorage.setItem("userInfo", JSON.stringify(userInfo));
 })

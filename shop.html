@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiracleLibrary</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <header>
+        <p style="position: relative; top:-5px; left:1000px;"><a href="inform.html" class="a-1">내정보</a></p>
+        <p style="position:absolute; top:-5px; left:1100px;"><a href="main.html" class="a-1">이야기</a></p>
+        <p style="position: absolute; top:-5px; left:1200px;"><a href="shop.html" class="a-1">포인트상점</a></p>
+    </header>
+    <form>
+        <p style="font-size:30px;position:relative; left:100px; top:250px; ">포인트 :<input type="number" value="0" readonly id="point" class="i-2">p</p>
+        <input type="button" value="포인트 확인" onclick="get()" class="i-01">
+    </form>
+    <hr>
+
+    <div>
+        <p class="p-1">3단 책꽃이</p>
+        <button type="button" onclick="buy()" id="b" value="12">응모하기-12P</button>
+    </div>
+
+    <br>
+
+    <div>
+        <p  class="p-1">뉴민트향 책갈피</p>
+        <button type="button" onclick="buy1()" id="b1" value="3">응모하기-3P</button>
+    </div>
+
+    <br>
+
+    <div>
+        <p  class="p-1">신 베스트셀러 중 1종</p>
+        <button type="button" onclick="buy2()" id="b2" value="21">응모하기-21P</button>
+    </div>
+
+    <br>
+        
+    <div>
+        <p  class="p-1">국립중앙도서관 키링 </p>
+        <button type="button" onclick="buy3()" id="b3" value="18">응모하기-18P</button>
+    </div>
+</body>
+<script src="write.js"></script>
+
+</html>

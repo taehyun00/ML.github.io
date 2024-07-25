@@ -15,13 +15,16 @@
     <div class="d-1">
         
             <input type="text" placeholder="제목" class="i-1" >
-            <button type="button" onclick="bold()">B</button>
-            <button type="button" onclick="italy()">I</button>
+            <button type="button" onclick="bold()" class="b-1">B</button>
+            <button type="button" onclick="italy()" class="b-1">I</button>
             <hr>
             <textarea placeholder="내용" class="i-2" id="content" onkeydown="calc()" onkeyup="calc()" onkeypress="calc()" style="white-space :pre-wrap"></textarea>
             <input type="number" id="result" value="0" readonly class="i-2">
             <h6>자</h6>
+            <button type="button" class="b-2" onclick="sumbit()">제출</button>
     </div>
+    
+
 </body>
     <script src="write.js"></script>
 
