@@ -57,7 +57,7 @@ function sumbit(){
 
 
 function get(){
-    var loadpoint = localStorage.getItem("point");
+    var loadpoint = point;
     document.getElementById('point').value = loadpoint;
 }
 
