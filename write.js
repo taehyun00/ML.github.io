@@ -4,7 +4,7 @@ var link = "main.html";
 const quantity = "10";
 plus = Number(quantity);
 var point = 20;
-loadpoint = point;
+localStorage.setItem("point", point);
 
 
 
