@@ -1,0 +1,117 @@
+body{
+    width: 1000px;
+    background-image: linear-gradient(90deg,#66B342, #519DE3);
+    overflow-x: hidden;
+    overflow-y: hidden;
+ 
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}   
+
+a{
+    color : white;
+    font-weight:600;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+p{
+  color : white;
+  font-weight:bolder;
+}
+
+div.d-1{
+  border : 5px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 40px;
+
+  width: 600px;
+  height: 700px;
+  text-align: center;
+ position: relative;
+ top:-400px;
+ left:700px;
+
+
+}
+
+hr{
+  width: 400px;
+  height: 3px;
+  background-color: white;
+  border: 0;
+  border-radius: 20px;
+  position: relative;
+  top:15px;
+}
+
+input + label {  
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+  border-radius: 10px;
+  user-select: none;
+
+  position: relative;
+  top: -420px;
+  left:480px;
+}
+
+input:checked + label {  
+  background: rgb(255, 255, 255);
+}
+
+
+
+input{
+  display: none;
+}
+
+
+.btn-1{
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  color: #66B342;
+}
+a.a-1{
+  color: white;
+}
+a.a-1:hover{
+  color:#A0CCFF;
+  transition: all 0.3s;
+}
+a.a-2 {
+  color: #66B342;
+  background-color: white;
+  text-decoration: none;
+  padding: 10px 40px;
+  border-radius: 40px;
+}
+a.a-2:hover{
+  color: #ffffff;
+  background-color: rgb(0,0,0,0);
+  box-shadow: 0 0 0 3px #ffffff inset; 
+  transition: all 0.3s;
+}
+
+
+
+.btn-1:hover{
+  background-color: rgb(255, 255, 255,0);
+  color:white;
+  border:3px solid white;
+  border-radius: 20px;
+  transition: all 0.5s;
+}

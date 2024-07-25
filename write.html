@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiracleLibrary</title>
+    <link rel="stylesheet" href="write.css">
+</head>
+<body>
+    <header>
+        <p style="position: relative; top:-5px; left:1000px;"><a href="inform.html" class="a-1">내정보</a></p>
+        <p style="position:absolute; top:-5px; left:1100px;"><a href="main.html" class="a-1">이야기</a></p>
+        <p style="position: absolute; top:-5px; left:1200px;"><a href="shop.html" class="a-1">포인트상점</a></p>
+    </header>
+    <div class="d-1">
+        
+            <input type="text" placeholder="제목" class="i-1" >
+            <button type="button" onclick="bold()">B</button>
+            <button type="button" onclick="italy()">I</button>
+            <hr>
+            <textarea placeholder="내용" class="i-2" id="content" onkeydown="calc()" onkeyup="calc()" onkeypress="calc()" style="white-space :pre-wrap"></textarea>
+            <input type="number" id="result" value="0" readonly class="i-2">
+            <h6>자</h6>
+    </div>
+</body>
+    <script src="write.js"></script>
+
+</html>
