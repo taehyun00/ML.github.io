@@ -4,7 +4,7 @@ var link = "main.html";
 const quantity = "10";
 plus = Number(quantity);
 var point = 20;
-
+localStorage.setItem("point", point);
 
 
 
@@ -57,7 +57,7 @@ function sumbit(){
 
 
 function get(){
-    var loadpoint = point;
+    var loadpoint = localStorage.getItem("point");
     document.getElementById('point').value = loadpoint;
 }
 
