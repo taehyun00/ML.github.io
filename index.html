@@ -1,31 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ML.lonin</title>
-    <link rel="stylesheet" href="index.css">
-   
+    <title>NFC 리더</title>
 </head>
 <body>
-    <p style="font-size:100px;position:relative; left:100px; top:250px; ">MiracleLibrary</p>
-    <p style="font-size:35px;position: relative; left:105px; top:240px; ">도서관과 함께하는 신비</p>
-    <form class="hidden">
-    <div >
-        <input type="text" required class="i-1" id="id">
-        <label>아이디</label>
-        <span></span>
-    </div>
-    <div style="position: relative; top:200px;">
-        <input type="password" required class="i-1" id="pwd">
-        <label>비밀번호</label>
-        <span></span>
-    </div>
-    <button class="btn-1"  style="position: relative; top:250px; left:1000px;" id="login-btn"><a href="main.html" class="a-1" >로그인</a></button>
-    <button class="btn-2" style="position: relative; top:250px; left:1050px;"><a href="signup.html">회원가입</a></button>
-    </form>
+    <h1>NFC로 학생증 읽기</h1>
+    <button id="scan-btn">NFC 스캔 시작</button>
+    <p id="nfc-data">NFC 태그 정보를 여기에 표시합니다...</p>
+
+    <script>
+        const scanButton = document.getElementById('scan-btn');
+        const nfcDataElement = document.getElementById('nfc-data');
+
+        scanButton.addEventListener('click', async () => {
+            try {
+                if ('NDEFReader' in window) {
+                    const ndef = new NDEFReader();
+                    await ndef.scan();
+                    nfcDataElement.textContent = "NFC 스캔 중...";
+
+                    ndef.onreading = event => {
+                        const { message } = event;
+                        const decoder = new TextDecoder();
+                        let nfcData = '';
+
+                        for (const record of message.records) {
+                            nfcData += `Record type: ${record.recordType}\n`;
+                            nfcData += `MIME type: ${record.mediaType}\n`;
+                            nfcData += `Data: ${decoder.decode(record.data)}\n`;
+                        }
+
+                        nfcDataElement.textContent = `NFC 데이터: \n${nfcData}`;
+                    };
+                } else {
+                    nfcDataElement.textContent = "이 브라우저는 NFC를 지원하지 않습니다.";
+                }
+            } catch (error) {
+                console.error('NFC 읽기 중 오류 발생:', error);
+                nfcDataElement.textContent = "NFC 읽기 중 오류가 발생했습니다.";
+            }
+        });
+    </script>
 </body>
- <script src="index.js"></script>
-
-
 </html>
